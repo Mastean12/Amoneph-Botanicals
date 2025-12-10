@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Amoneph Botanicals | Pure Natural Wellness</title>
+    <meta name="description" content="Get in touch with Amoneph Botanicals. Reach us via phone, email, or visit our location in Nairobi. We're here to help with your natural wellness needs.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/LOGO.png">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/LOGO.png" alt="Amoneph Botanicals Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="main">AMONEPH</span>
+                        <span class="sub">Botanicals</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="tel:+254768427602" class="nav-link phone-link">
+                        <i class="fas fa-phone"></i> +254 768 427 602
+                    </a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="contact-hero-content fade-in">
+                <h1 class="contact-hero-title">Get in Touch</h1>
+                <p class="contact-hero-subtitle">We're Here to Support Your Natural Wellness Journey</p>
+                <p class="contact-hero-description">Have questions about our products? Need assistance with your order? Want to learn more about our sourcing practices? Our team is ready to help you experience the best of Kenyan natural wellness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            <p class="section-subtitle">Multiple ways to reach us for inquiries, orders, or support</p>
+            
+            <div class="contact-cards-grid">
+                <!-- Phone Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone & WhatsApp</h3>
+                    <p class="contact-detail">+254 768 427 602</p>
+                    <p class="contact-description">Call us directly for immediate assistance or use WhatsApp for quick queries and orders.</p>
+                    <a href="tel:+254768427602" class="contact-action-btn">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/254768427602" class="contact-action-btn whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+                
+                <!-- Email Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p class="contact-detail">amonephremedies@gmail.com</p>
+                    <p class="contact-description">Send us detailed inquiries, partnership proposals, or feedback. We respond within 24 hours.</p>
+                    <a href="mailto:amonephremedies@gmail.com" class="contact-action-btn">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+                
+                <!-- Location -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p class="contact-detail">Nairobi, Kenya</p>
+                    <p class="contact-description">Based in the heart of Kenya, we source directly from trusted farmers across the country.</p>
+                    <a href="#location-map" class="contact-action-btn">
+                        <i class="fas fa-map"></i> View Map
+                    </a>
+                </div>
+                
+                <!-- Business Hours -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p class="contact-detail">Monday - Saturday</p>
+                    <p class="contact-description">8:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p>
+                    <button class="contact-action-btn schedule-btn">
+                        <i class="fas fa-calendar"></i> Schedule Call
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-form-map">
+        <div class="container">
+            <div class="form-map-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="form-title">Send Us a Message</h2>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i> Full Name *
+                                </label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i> Phone Number *
+                                </label>
+                                <input type="tel" id="phone" name="phone" required placeholder="e.g., +254 768 427 602">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i> Subject *
+                            </label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select inquiry type</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="order-support">Order Support</option>
+                                <option value="bulk-order">Bulk/Wholesale Order</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i> Your Message *
+                            </label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please describe your inquiry in detail..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for updates on new products and special offers</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <div class="form-note">
+                            <p><i class="fas fa-info-circle"></i> We typically respond within 24 hours during business days.</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Map and Additional Info -->
+                <div class="map-info-container">
+                    <div class="map-container" id="location-map">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Nairobi, Kenya</h3>
+                            <p>Interactive map location</p>
+                            <div class="map-actions">
+                                <button class="map-action-btn" onclick="openGoogleMaps()">
+                                    <i class="fab fa-google"></i> Open in Google Maps
+                                </button>
+                                <button class="map-action-btn" onclick="openAppleMaps()">
+                                    <i class="fab fa-apple"></i> Open in Apple Maps
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Information -->
+                    <div class="payment-info">
+                        <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                        <div class="payment-details">
+                            <div class="payment-method">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>M-Pesa Payment</h4>
+                                    <p>Till Number: <strong>6960285</strong></p>
+                                    <p class="payment-note">Business Name: Amoneph Botanicals</p>
+                                </div>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div>
+                                    <h4>Cash on Delivery</h4>
+                                    <p>Available for Nairobi orders</p>
+                                    <p class="payment-note">Free delivery for orders above KSh 2,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Response -->
+                    <div class="quick-response">
+                        <h3><i class="fas fa-bolt"></i> Quick Response Options</h3>
+                        <div class="quick-options">
+                            <a href="https://wa.me/254768427602?text=Hello%20Amoneph%20Botanicals!%20I%20have%20a%20quick%20question." 
+                               class="quick-option whatsapp-option" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp Quick Chat</h4>
+                                    <p>Get instant responses</p>
+                                </div>
+                            </a>
+                            <a href="tel:+254768427602" class="quick-option call-option">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Direct Call</h4>
+                                    <p>Speak with our team</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Quick answers to common questions about orders, delivery, and products</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-shipping-fast"></i> What are your delivery areas and times?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We deliver to Nairobi, Kiambu, Nakuru, and Kakamega counties. Orders placed before 2 PM are delivered same day in Nairobi. Other counties: 1-2 business days. Free delivery for orders above KSh 2,000.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-box"></i> How do I track my order?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once your order is dispatched, we'll send you a tracking link via WhatsApp or SMS. You can also call us directly for order status updates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-exchange-alt"></i> What is your return policy?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept returns within 7 days of delivery for damaged or incorrect items. Products must be unopened and in original packaging. For quality concerns, please contact us immediately.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-users"></i> Do you offer wholesale/bulk pricing?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer special pricing for bulk orders and wholesale partnerships. Contact us directly via phone or email to discuss volume discounts and partnership opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-leaf"></i> Are your products certified organic?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our products are 100% natural, sourced directly from trusted Kenyan farmers using traditional methods. While we follow organic practices, we're in the process of obtaining formal organic certification.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-calendar-alt"></i> How long do your products last?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our raw honey has an indefinite shelf life. Nut butters last 3-6 months unopened, 1-2 months after opening. Herbal powders last 12 months. Oils last 12-18 months. Store in cool, dry places away from direct sunlight.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>Still have questions? <a href="tel:+254768427602">Call us directly</a> or <a href="https://wa.me/254768427602" target="_blank">chat on WhatsApp</a> for immediate assistance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Connect -->
+    <section class="social-connect">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            <p class="section-subtitle">Follow us on social media for updates, wellness tips, and special offers</p>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Follow for wellness tips and community updates</p>
+                    <span class="social-cta">Like & Follow →</span>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Behind-the-scenes and product highlights</p>
+                    <span class="social-cta">Follow Us →</span>
+                </a>
+                
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter</h3>
+                    <p>Quick updates and announcements</p>
+                    <span class="social-cta">Follow →</span>
+                </a>
+                
+                <a href="https://wa.me/254768427602" class="social-card whatsapp" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Direct customer support and orders</p>
+                    <span class="social-cta">Message Now →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/LOGO.png" alt="Amoneph Logo">
+                        <h3>Amoneph Botanicals</h3>
+                    </div>
+                    <p class="footer-description">Providing pure, nutrient-rich, and affordable wellness products sourced directly from trusted Kenyan farmers.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/254768427602" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Our Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#honey">Pure Natural Honey</a></li>
+                        <li><a href="products.html#nut-butter">Natural Peanut Butter</a></li>
+                        <li><a href="products.html#herbal-powder">Hibiscus Powder</a></li>
+                        <li><a href="products.html#oil">Cold-Pressed Castor Oil</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact & Payment</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 768 427 602</p>
+                        <p><i class="fas fa-envelope"></i> amonephremedies@gmail.com</p>
+                        <p><i class="fas fa-mobile-alt"></i> M-Pesa Till: 6960285</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Amoneph Botanicals. All rights reserved.</p>
+                <p class="tagline">Choose Nature. Choose Wellness. Choose Amoneph Botanicals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254768427602?text=Hello%20Amoneph%20Botanicals!%20I'd%20like%20to%20learn%20more%20about%20your%20products." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -10,6 +10,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/LOGO.png">
+    <style>
+        /* Temporary styles to ensure layout works while you update products.css */
+        .alternating-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .content-text, .content-image {
+            flex: 1;
+        }
+        
+        .alternating-content.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .circular-image-frame {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid #f8f9fa;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .circular-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .circular-image-container {
+            width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 12px solid #f8f9fa;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+        }
+        
+        .circular-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .btn-view-details {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #d4a017, #b8860b);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -95,14 +154,14 @@
         </div>
     </section>
 
-    <!-- Explore Our Products with Order Forms -->
+    <!-- Product Categories - EXPLORE OUR PRODUCTS - Half-Half Layout -->
     <section class="product-categories">
         <div class="container">
-            <h2 class="section-title">Explore & Order Our Products</h2>
-            <p class="section-subtitle">Select any product below to view details and place your order directly</p>
+            <h2 class="section-title">Explore Our Products</h2>
+            <p class="section-subtitle">Click on any category to learn more about our offerings</p>
             
-            <!-- Pure Honey Product with Order Form -->
-            <div class="product-item" id="honey">
+            <!-- Honey Category - Image Right, Content Left -->
+            <div class="alternating-product-section" id="honey">
                 <div class="alternating-content">
                     <div class="content-text">
                         <div class="category-header-mini">
@@ -112,18 +171,6 @@
                             <h3 class="category-title">Pure Honey</h3>
                         </div>
                         <p class="category-description">Raw, unprocessed honey sourced directly from Kenyan forests. Rich in natural enzymes and antioxidants.</p>
-                        
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-text">4.7 (128 reviews)</span>
-                        </div>
-                        
                         <div class="benefits">
                             <h4>Key Benefits:</h4>
                             <ul class="benefits-list">
@@ -138,10 +185,214 @@
                             <h4>How to Use:</h4>
                             <p>As a natural sweetener in tea, coffee, or smoothies • Spread on toast or pancakes • In homemade face masks • As a natural remedy for coughs and colds</p>
                         </div>
+                        <a href="#honey-products" class="btn-view-details">
+                            <i class="fas fa-info-circle"></i> View Details & Order
+                        </a>
+                    </div>
+                    <div class="content-image">
+                        <div class="circular-image-frame">
+                            <img src="images/products/Honey.jpeg" alt="Pure Natural Honey">
+                            <div class="image-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>100% Natural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nut Butter Category - Image Left, Content Right -->
+            <div class="alternating-product-section" id="nut-butter">
+                <div class="alternating-content reverse">
+                    <div class="content-text">
+                        <div class="category-header-mini">
+                            <div class="category-icon-mini">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="category-title">Nut Butters</h3>
+                        </div>
+                        <p class="category-description">Creamy, nutrient-dense spreads made from locally sourced nuts. No additives or preservatives.</p>
+                        <div class="benefits">
+                            <h4>Key Benefits:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check"></i> High in Protein</li>
+                                <li><i class="fas fa-check"></i> No Added Sugar</li>
+                                <li><i class="fas fa-check"></i> Vegan Friendly</li>
+                                <li><i class="fas fa-check"></i> Rich in Healthy Fats</li>
+                                <li><i class="fas fa-check"></i> Supports Heart Health</li>
+                            </ul>
+                        </div>
+                        <div class="usage">
+                            <h4>How to Use:</h4>
+                            <p>Spread on toast, crackers, or fruits • Add to smoothies for protein boost • Use in baking and cooking • As a dip for vegetables</p>
+                        </div>
+                        <a href="#nut-butter-products" class="btn-view-details">
+                            <i class="fas fa-info-circle"></i> View Details & Order
+                        </a>
+                    </div>
+                    <div class="content-image">
+                        <div class="circular-image-frame">
+                            <img src="images/products/Peanut butter.jpeg" alt="Natural Peanut Butter">
+                            <div class="image-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>No Added Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herbal Powder Category - Image Right, Content Left -->
+            <div class="alternating-product-section" id="herbal-powder">
+                <div class="alternating-content">
+                    <div class="content-text">
+                        <div class="category-header-mini">
+                            <div class="category-icon-mini">
+                                <i class="fas fa-mortar-pestle"></i>
+                            </div>
+                            <h3 class="category-title">Herbal Powders</h3>
+                        </div>
+                        <p class="category-description">Finely ground traditional herbs and plants for wellness, cooking, and natural remedies.</p>
+                        <div class="benefits">
+                            <h4>Key Benefits:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check"></i> Rich in Nutrients</li>
+                                <li><i class="fas fa-check"></i> Traditional Wisdom</li>
+                                <li><i class="fas fa-check"></i> Versatile Use</li>
+                                <li><i class="fas fa-check"></i> Rich in Vitamin C</li>
+                                <li><i class="fas fa-check"></i> Natural Detox</li>
+                            </ul>
+                        </div>
+                        <div class="usage">
+                            <h4>How to Use:</h4>
+                            <p>Brew as a refreshing tea • Add to smoothies for color and nutrients • Use in homemade skincare masks • Incorporate into baking and desserts</p>
+                        </div>
+                        <a href="#herbal-powder-products" class="btn-view-details">
+                            <i class="fas fa-info-circle"></i> View Details & Order
+                        </a>
+                    </div>
+                    <div class="content-image">
+                        <div class="circular-image-frame">
+                            <img src="images/products/Hibiscus.jpeg" alt="Hibiscus Powder">
+                            <div class="image-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>Traditional Herb</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cold-Pressed Oil Category - Image Left, Content Right -->
+            <div class="alternating-product-section" id="oil">
+                <div class="alternating-content reverse">
+                    <div class="content-text">
+                        <div class="category-header-mini">
+                            <div class="category-icon-mini">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3 class="category-title">Cold-Pressed Oils</h3>
+                        </div>
+                        <p class="category-description">Pure oils extracted using traditional cold-pressing methods to preserve nutrients and potency.</p>
+                        <div class="benefits">
+                            <h4>Key Benefits:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check"></i> Preserves Nutrients</li>
+                                <li><i class="fas fa-check"></i> No Chemicals Used</li>
+                                <li><i class="fas fa-check"></i> Therapeutic Grade</li>
+                                <li><i class="fas fa-check"></i> Promotes Hair Growth</li>
+                                <li><i class="fas fa-check"></i> Moisturizes Skin</li>
+                            </ul>
+                        </div>
+                        <div class="usage">
+                            <h4>How to Use:</h4>
+                            <p>Apply to scalp for hair growth • Use as a natural moisturizer • Apply to eyelashes and eyebrows • For massage and relaxation</p>
+                        </div>
+                        <a href="#oil-products" class="btn-view-details">
+                            <i class="fas fa-info-circle"></i> View Details & Order
+                        </a>
+                    </div>
+                    <div class="content-image">
+                        <div class="circular-image-frame">
+                            <img src="images/products/Castor oil.jpeg" alt="Cold-Pressed Castor Oil">
+                            <div class="image-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>Cold-Pressed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Products Section with Professional Order Form - PRODUCT COLLECTION -->
+    <section class="detailed-products">
+        <div class="container">
+            <!-- Honey Products -->
+            <div class="product-category-section" id="honey-products">
+                <div class="category-header">
+                    <div class="category-title-wrapper">
+                        <div class="category-icon-large">
+                            <i class="fas fa-honey-pot"></i>
+                        </div>
+                        <h2 class="category-title">Pure Honey Collection</h2>
+                    </div>
+                    <p class="category-subtitle">Raw honey harvested from the pristine forests of Kenya</p>
+                </div>
+                
+                <div class="product-detail-grid">
+                    <div class="product-detail-image">
+                        <div class="circular-image-container">
+                            <img src="images/products/honey2.jpeg" alt="Pure Kenyan Honey">
+                            <div class="circular-image-badge">
+                                <i class="fas fa-award"></i>
+                                <span>Premium Quality</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-info">
+                        <h3 class="product-name">Raw Kenyan Forest Honey</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.7 (128 reviews)</span>
+                        </div>
                         
-                        <!-- Order Form for Honey -->
+                        <div class="product-description-full">
+                            <p>Our pure Kenyan honey is sourced directly from beekeepers in the lush forests of Kenya. This raw honey is unprocessed, unpasteurized, and retains all its natural enzymes, antioxidants, and nutrients.</p>
+                            
+                            <div class="benefits">
+                                <h4>Key Benefits:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Natural energy booster</li>
+                                    <li><i class="fas fa-check"></i> Rich in antioxidants</li>
+                                    <li><i class="fas fa-check"></i> Soothes sore throats</li>
+                                    <li><i class="fas fa-check"></i> Contains natural enzymes</li>
+                                    <li><i class="fas fa-check"></i> Great for skincare</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage">
+                                <h4>How to Use:</h4>
+                                <ul>
+                                    <li>As a natural sweetener in tea, coffee, or smoothies</li>
+                                    <li>Spread on toast or pancakes</li>
+                                    <li>In homemade face masks for glowing skin</li>
+                                    <li>As a natural remedy for coughs and colds</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Order Form -->
                         <div class="order-form">
-                            <h4 class="order-form-title">Order Pure Honey</h4>
+                            <h4 class="order-form-title">Order Now</h4>
                             <div class="size-options">
                                 <h5>Select Size:</h5>
                                 <div class="size-buttons">
@@ -198,7 +449,7 @@
                             </div>
                             
                             <div class="order-buttons">
-                                <button class="btn-whatsapp-order" data-product="Pure Honey">
+                                <button class="btn-whatsapp-order" data-product="Raw Kenyan Forest Honey">
                                     <i class="fab fa-whatsapp"></i> Order via WhatsApp
                                 </button>
                                 <button class="btn-call-order">
@@ -211,31 +462,34 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="content-image">
-                        <div class="circular-image-frame">
-                            <img src="images/products/Honey.jpeg" alt="Pure Natural Honey">
-                            <div class="image-badge">
-                                <i class="fas fa-award"></i>
-                                <span>100% Natural</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Nut Butter Product with Order Form -->
-            <div class="product-item" id="nut-butter">
-                <div class="alternating-content reverse">
-                    <div class="content-text">
-                        <div class="category-header-mini">
-                            <div class="category-icon-mini">
-                                <i class="fas fa-seedling"></i>
-                            </div>
-                            <h3 class="category-title">Nut Butters</h3>
+            <!-- Nut Butter Products -->
+            <div class="product-category-section" id="nut-butter-products">
+                <div class="category-header">
+                    <div class="category-title-wrapper">
+                        <div class="category-icon-large">
+                            <i class="fas fa-seedling"></i>
                         </div>
-                        <p class="category-description">Creamy, nutrient-dense spreads made from locally sourced nuts. No additives or preservatives.</p>
-                        
+                        <h2 class="category-title">Nut Butters Collection</h2>
+                    </div>
+                    <p class="category-subtitle">Creamy, nutrient-dense spreads made from local Kenyan nuts</p>
+                </div>
+                
+                <div class="product-detail-grid">
+                    <div class="product-detail-image">
+                        <div class="circular-image-container">
+                            <img src="images/products/peanut-butter.jpeg" alt="Natural Peanut Butter">
+                            <div class="circular-image-badge">
+                                <i class="fas fa-award"></i>
+                                <span>No Added Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-info">
+                        <h3 class="product-name">Natural Peanut Butter</h3>
                         <div class="product-rating">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -247,24 +501,34 @@
                             <span class="rating-text">5.0 (96 reviews)</span>
                         </div>
                         
-                        <div class="benefits">
-                            <h4>Key Benefits:</h4>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> High in Protein</li>
-                                <li><i class="fas fa-check"></i> No Added Sugar</li>
-                                <li><i class="fas fa-check"></i> Vegan Friendly</li>
-                                <li><i class="fas fa-check"></i> Rich in Healthy Fats</li>
-                                <li><i class="fas fa-check"></i> Supports Heart Health</li>
-                            </ul>
-                        </div>
-                        <div class="usage">
-                            <h4>How to Use:</h4>
-                            <p>Spread on toast, crackers, or fruits • Add to smoothies for protein boost • Use in baking and cooking • As a dip for vegetables</p>
+                        <div class="product-description-full">
+                            <p>Made from 100% Kenyan peanuts with absolutely nothing added. Our natural peanut butter is rich in protein, healthy fats, and essential nutrients. Just peanuts, pure and simple.</p>
+                            
+                            <div class="benefits">
+                                <h4>Key Benefits:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> High in plant-based protein</li>
+                                    <li><i class="fas fa-check"></i> Rich in healthy monounsaturated fats</li>
+                                    <li><i class="fas fa-check"></i> Contains Vitamin E and B vitamins</li>
+                                    <li><i class="fas fa-check"></i> Good source of magnesium</li>
+                                    <li><i class="fas fa-check"></i> Supports heart health</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage">
+                                <h4>How to Use:</h4>
+                                <ul>
+                                    <li>Spread on toast, crackers, or fruits</li>
+                                    <li>Add to smoothies for protein boost</li>
+                                    <li>Use in baking and cooking</li>
+                                    <li>As a dip for vegetables</li>
+                                </ul>
+                            </div>
                         </div>
                         
-                        <!-- Order Form for Nut Butter -->
+                        <!-- Professional Order Form -->
                         <div class="order-form">
-                            <h4 class="order-form-title">Order Nut Butters</h4>
+                            <h4 class="order-form-title">Order Now</h4>
                             <div class="size-options">
                                 <h5>Select Size:</h5>
                                 <div class="size-buttons">
@@ -304,15 +568,15 @@
                                 <h5>Payment Method:</h5>
                                 <div class="payment-options">
                                     <div class="payment-option">
-                                        <input type="radio" id="mpesa-nut" name="payment-nut" checked>
-                                        <label for="mpesa-nut">
+                                        <input type="radio" id="mpesa-peanut" name="payment-peanut" checked>
+                                        <label for="mpesa-peanut">
                                             <i class="fas fa-mobile-alt"></i>
                                             <span>M-Pesa (Till: 6960285)</span>
                                         </label>
                                     </div>
                                     <div class="payment-option">
-                                        <input type="radio" id="cod-nut" name="payment-nut">
-                                        <label for="cod-nut">
+                                        <input type="radio" id="cod-peanut" name="payment-peanut">
+                                        <label for="cod-peanut">
                                             <i class="fas fa-money-bill-wave"></i>
                                             <span>Cash on Delivery</span>
                                         </label>
@@ -321,7 +585,7 @@
                             </div>
                             
                             <div class="order-buttons">
-                                <button class="btn-whatsapp-order" data-product="Nut Butters">
+                                <button class="btn-whatsapp-order" data-product="Natural Peanut Butter">
                                     <i class="fab fa-whatsapp"></i> Order via WhatsApp
                                 </button>
                                 <button class="btn-call-order">
@@ -334,31 +598,34 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="content-image">
-                        <div class="circular-image-frame">
-                            <img src="images/products/Peanut butter.jpeg" alt="Natural Peanut Butter">
-                            <div class="image-badge">
-                                <i class="fas fa-award"></i>
-                                <span>No Added Sugar</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Herbal Powder Product with Order Form -->
-            <div class="product-item" id="herbal-powder">
-                <div class="alternating-content">
-                    <div class="content-text">
-                        <div class="category-header-mini">
-                            <div class="category-icon-mini">
-                                <i class="fas fa-mortar-pestle"></i>
-                            </div>
-                            <h3 class="category-title">Herbal Powders</h3>
+            <!-- Herbal Powder Products -->
+            <div class="product-category-section" id="herbal-powder-products">
+                <div class="category-header">
+                    <div class="category-title-wrapper">
+                        <div class="category-icon-large">
+                            <i class="fas fa-mortar-pestle"></i>
                         </div>
-                        <p class="category-description">Finely ground traditional herbs and plants for wellness, cooking, and natural remedies.</p>
-                        
+                        <h2 class="category-title">Herbal Powders Collection</h2>
+                    </div>
+                    <p class="category-subtitle">Traditional Kenyan herbs ground into fine wellness powders</p>
+                </div>
+                
+                <div class="product-detail-grid">
+                    <div class="product-detail-image">
+                        <div class="circular-image-container">
+                            <img src="images/products/Hibiscus2.jpeg" alt="Hibiscus Powder">
+                            <div class="circular-image-badge">
+                                <i class="fas fa-award"></i>
+                                <span>Traditional Herb</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-info">
+                        <h3 class="product-name">Hibiscus Wellness Powder</h3>
                         <div class="product-rating">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -370,24 +637,34 @@
                             <span class="rating-text">4.5 (87 reviews)</span>
                         </div>
                         
-                        <div class="benefits">
-                            <h4>Key Benefits:</h4>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Rich in Nutrients</li>
-                                <li><i class="fas fa-check"></i> Traditional Wisdom</li>
-                                <li><i class="fas fa-check"></i> Versatile Use</li>
-                                <li><i class="fas fa-check"></i> Rich in Vitamin C</li>
-                                <li><i class="fas fa-check"></i> Natural Detox</li>
-                            </ul>
-                        </div>
-                        <div class="usage">
-                            <h4>How to Use:</h4>
-                            <p>Brew as a refreshing tea • Add to smoothies for color and nutrients • Use in homemade skincare masks • Incorporate into baking and desserts</p>
+                        <div class="product-description-full">
+                            <p>Finely ground hibiscus flowers, a traditional Kenyan remedy known for its vibrant color and numerous health benefits. Rich in Vitamin C and antioxidants.</p>
+                            
+                            <div class="benefits">
+                                <h4>Key Benefits:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Rich in Vitamin C and antioxidants</li>
+                                    <li><i class="fas fa-check"></i> Supports healthy blood pressure</li>
+                                    <li><i class="fas fa-check"></i> Promotes liver health</li>
+                                    <li><i class="fas fa-check"></i> Contains anti-inflammatory properties</li>
+                                    <li><i class="fas fa-check"></i> May aid in weight management</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage">
+                                <h4>How to Use:</h4>
+                                <ul>
+                                    <li>Brew as a refreshing tea (1-2 teaspoons per cup)</li>
+                                    <li>Add to smoothies for color and nutrients</li>
+                                    <li>Use in homemade skincare masks</li>
+                                    <li>Incorporate into baking and desserts</li>
+                                </ul>
+                            </div>
                         </div>
                         
-                        <!-- Order Form for Herbal Powder -->
+                        <!-- Professional Order Form -->
                         <div class="order-form">
-                            <h4 class="order-form-title">Order Herbal Powders</h4>
+                            <h4 class="order-form-title">Order Now</h4>
                             <div class="size-options">
                                 <h5>Select Size:</h5>
                                 <div class="size-buttons">
@@ -427,15 +704,15 @@
                                 <h5>Payment Method:</h5>
                                 <div class="payment-options">
                                     <div class="payment-option">
-                                        <input type="radio" id="mpesa-herbal" name="payment-herbal" checked>
-                                        <label for="mpesa-herbal">
+                                        <input type="radio" id="mpesa-hibiscus" name="payment-hibiscus" checked>
+                                        <label for="mpesa-hibiscus">
                                             <i class="fas fa-mobile-alt"></i>
                                             <span>M-Pesa (Till: 6960285)</span>
                                         </label>
                                     </div>
                                     <div class="payment-option">
-                                        <input type="radio" id="cod-herbal" name="payment-herbal">
-                                        <label for="cod-herbal">
+                                        <input type="radio" id="cod-hibiscus" name="payment-hibiscus">
+                                        <label for="cod-hibiscus">
                                             <i class="fas fa-money-bill-wave"></i>
                                             <span>Cash on Delivery</span>
                                         </label>
@@ -444,7 +721,7 @@
                             </div>
                             
                             <div class="order-buttons">
-                                <button class="btn-whatsapp-order" data-product="Herbal Powders">
+                                <button class="btn-whatsapp-order" data-product="Hibiscus Wellness Powder">
                                     <i class="fab fa-whatsapp"></i> Order via WhatsApp
                                 </button>
                                 <button class="btn-call-order">
@@ -457,31 +734,34 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="content-image">
-                        <div class="circular-image-frame">
-                            <img src="images/products/Hibiscus.jpeg" alt="Hibiscus Powder">
-                            <div class="image-badge">
-                                <i class="fas fa-award"></i>
-                                <span>Traditional Herb</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Cold-Pressed Oil Product with Order Form -->
-            <div class="product-item" id="oil">
-                <div class="alternating-content reverse">
-                    <div class="content-text">
-                        <div class="category-header-mini">
-                            <div class="category-icon-mini">
-                                <i class="fas fa-tint"></i>
-                            </div>
-                            <h3 class="category-title">Cold-Pressed Oils</h3>
+            <!-- Cold-Pressed Oil Products -->
+            <div class="product-category-section" id="oil-products">
+                <div class="category-header">
+                    <div class="category-title-wrapper">
+                        <div class="category-icon-large">
+                            <i class="fas fa-tint"></i>
                         </div>
-                        <p class="category-description">Pure oils extracted using traditional cold-pressing methods to preserve nutrients and potency.</p>
-                        
+                        <h2 class="category-title">Cold-Pressed Oils Collection</h2>
+                    </div>
+                    <p class="category-subtitle">Pure oils extracted using traditional cold-pressing methods</p>
+                </div>
+                
+                <div class="product-detail-grid">
+                    <div class="product-detail-image">
+                        <div class="circular-image-container">
+                            <img src="images/products/Castor-oil.jpeg" alt="Cold-Pressed Castor Oil">
+                            <div class="circular-image-badge">
+                                <i class="fas fa-award"></i>
+                                <span>Cold-Pressed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail-info">
+                        <h3 class="product-name">Cold-Pressed Castor Oil</h3>
                         <div class="product-rating">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -493,24 +773,34 @@
                             <span class="rating-text">5.0 (142 reviews)</span>
                         </div>
                         
-                        <div class="benefits">
-                            <h4>Key Benefits:</h4>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Preserves Nutrients</li>
-                                <li><i class="fas fa-check"></i> No Chemicals Used</li>
-                                <li><i class="fas fa-check"></i> Therapeutic Grade</li>
-                                <li><i class="fas fa-check"></i> Promotes Hair Growth</li>
-                                <li><i class="fas fa-check"></i> Moisturizes Skin</li>
-                            </ul>
-                        </div>
-                        <div class="usage">
-                            <h4>How to Use:</h4>
-                            <p>Apply to scalp for hair growth • Use as a natural moisturizer • Apply to eyelashes and eyebrows • For massage and relaxation</p>
+                        <div class="product-description-full">
+                            <p>Pure, cold-pressed castor oil extracted using traditional methods that preserve its natural therapeutic properties. No chemicals, no additives, just pure oil.</p>
+                            
+                            <div class="benefits">
+                                <h4>Key Benefits:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Promotes hair growth and thickness</li>
+                                    <li><i class="fas fa-check"></i> Moisturizes and nourishes skin</li>
+                                    <li><i class="fas fa-check"></i> Supports eyelash and eyebrow growth</li>
+                                    <li><i class="fas fa-check"></i> Natural anti-inflammatory properties</li>
+                                    <li><i class="fas fa-check"></i> Supports digestive health when used appropriately</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage">
+                                <h4>How to Use:</h4>
+                                <ul>
+                                    <li>Apply to scalp for hair growth (leave overnight)</li>
+                                    <li>Use as a natural moisturizer for skin</li>
+                                    <li>Apply to eyelashes and eyebrows</li>
+                                    <li>For massage and relaxation</li>
+                                </ul>
+                            </div>
                         </div>
                         
-                        <!-- Order Form for Cold-Pressed Oil -->
+                        <!-- Professional Order Form -->
                         <div class="order-form">
-                            <h4 class="order-form-title">Order Cold-Pressed Oils</h4>
+                            <h4 class="order-form-title">Order Now</h4>
                             <div class="size-options">
                                 <h5>Select Size:</h5>
                                 <div class="size-buttons">
@@ -550,15 +840,15 @@
                                 <h5>Payment Method:</h5>
                                 <div class="payment-options">
                                     <div class="payment-option">
-                                        <input type="radio" id="mpesa-oil" name="payment-oil" checked>
-                                        <label for="mpesa-oil">
+                                        <input type="radio" id="mpesa-castor" name="payment-castor" checked>
+                                        <label for="mpesa-castor">
                                             <i class="fas fa-mobile-alt"></i>
                                             <span>M-Pesa (Till: 6960285)</span>
                                         </label>
                                     </div>
                                     <div class="payment-option">
-                                        <input type="radio" id="cod-oil" name="payment-oil">
-                                        <label for="cod-oil">
+                                        <input type="radio" id="cod-castor" name="payment-castor">
+                                        <label for="cod-castor">
                                             <i class="fas fa-money-bill-wave"></i>
                                             <span>Cash on Delivery</span>
                                         </label>
@@ -567,7 +857,7 @@
                             </div>
                             
                             <div class="order-buttons">
-                                <button class="btn-whatsapp-order" data-product="Cold-Pressed Oils">
+                                <button class="btn-whatsapp-order" data-product="Cold-Pressed Castor Oil">
                                     <i class="fab fa-whatsapp"></i> Order via WhatsApp
                                 </button>
                                 <button class="btn-call-order">
@@ -577,16 +867,6 @@
                             
                             <div class="delivery-note">
                                 <p><i class="fas fa-info-circle"></i> Free delivery for orders above KSh 2,000. Delivery within 24 hours in Nairobi.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="content-image">
-                        <div class="circular-image-frame">
-                            <img src="images/products/Castor oil.jpeg" alt="Cold-Pressed Castor Oil">
-                            <div class="image-badge">
-                                <i class="fas fa-award"></i>
-                                <span>Cold-Pressed</span>
                             </div>
                         </div>
                     </div>
@@ -665,10 +945,10 @@
                 <div class="footer-column">
                     <h4 class="footer-title">Our Products</h4>
                     <ul class="footer-links">
-                        <li><a href="#honey">Pure Natural Honey</a></li>
-                        <li><a href="#nut-butter">Natural Peanut Butter</a></li>
-                        <li><a href="#herbal-powder">Hibiscus Powder</a></li>
-                        <li><a href="#oil">Cold-Pressed Castor Oil</a></li>
+                        <li><a href="#honey-products">Pure Natural Honey</a></li>
+                        <li><a href="#nut-butter-products">Natural Peanut Butter</a></li>
+                        <li><a href="#herbal-powder-products">Hibiscus Powder</a></li>
+                        <li><a href="#oil-products">Cold-Pressed Castor Oil</a></li>
                     </ul>
                 </div>
                 
@@ -704,19 +984,19 @@
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
     <script>
-        // Order form functionality
+        // Add JavaScript for order forms
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all order forms
-            const productItems = document.querySelectorAll('.product-item');
+            // Initialize order forms
+            const productSections = document.querySelectorAll('.product-category-section');
             
-            productItems.forEach(item => {
+            productSections.forEach(section => {
                 // Size selection
-                const sizeBtns = item.querySelectorAll('.size-btn');
-                const qtyInput = item.querySelector('.qty-input');
-                const minusBtn = item.querySelector('.qty-btn.minus');
-                const plusBtn = item.querySelector('.qty-btn.plus');
-                const totalAmount = item.querySelector('.total-amount');
-                const selectedSize = item.querySelector('.selected-size');
+                const sizeBtns = section.querySelectorAll('.size-btn');
+                const qtyInput = section.querySelector('.qty-input');
+                const minusBtn = section.querySelector('.qty-btn.minus');
+                const plusBtn = section.querySelector('.qty-btn.plus');
+                const totalAmount = section.querySelector('.total-amount');
+                const selectedSize = section.querySelector('.selected-size');
                 
                 let currentPrice = 0;
                 let currentSize = '';
@@ -773,7 +1053,7 @@
                 }
                 
                 // WhatsApp order button
-                const whatsappBtn = item.querySelector('.btn-whatsapp-order');
+                const whatsappBtn = section.querySelector('.btn-whatsapp-order');
                 if (whatsappBtn) {
                     whatsappBtn.addEventListener('click', function() {
                         const productName = this.dataset.product || 'Product';
@@ -796,12 +1076,32 @@
                 }
                 
                 // Call to order button
-                const callBtn = item.querySelector('.btn-call-order');
+                const callBtn = section.querySelector('.btn-call-order');
                 if (callBtn) {
                     callBtn.addEventListener('click', function() {
                         window.location.href = 'tel:+254768427602';
                     });
                 }
+            });
+            
+            // Smooth scroll for View Details buttons
+            const viewDetailButtons = document.querySelectorAll('.btn-view-details');
+            viewDetailButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
             });
         });
     </script>

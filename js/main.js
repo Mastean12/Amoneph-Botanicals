@@ -116,3 +116,48 @@ window.addEventListener('scroll', () => {
 });
 
 console.log('Amoneph Botanicals website loaded successfully!');
+
+// main.js - Navigation and Common Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    }
+    
+    // Set current year in footer
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+    
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
