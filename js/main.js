@@ -1,19 +1,43 @@
 // ===== MOBILE NAVIGATION TOGGLE =====
+// Add these functions to your existing main.js
+
+// Mobile menu toggle (if not already there)
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
+
+// WhatsApp order function
+function orderViaWhatsApp(productName, size, quantity, totalPrice) {
+    const message = `Hello Amoneph Botanicals! I'd like to order:\n\n` +
+                   `Product: ${productName}\n` +
+                   `Size: ${size}\n` +
+                   `Quantity: ${quantity}\n` +
+                   `Total: KSh ${totalPrice}\n\n` +
+                   `Please let me know the next steps!`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/254768427602?text=${encodedMessage}`, '_blank');
+}
+
+// Call to order
+function callToOrder() {
+    window.location.href = 'tel:+254768427602';
+}
 
 // ===== SMOOTH SCROLLING =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
